@@ -45,7 +45,7 @@ print(mymessage[21]) # b
 
 # waxaad siin kartaa tiro maynis wada 
 print(mymessage[-1]) # a
-print(mymessage[-7])
+print(mymessage[-7]) # r
 
 # waxaad siin kartaa bilow iyo dhamaad
 print(mymessage[0:16])
@@ -76,7 +76,7 @@ print(mymessage[::3]) #iayaa qmlaaym s
 # title() waxay kuugu badalaysaa qaab ciwaan xataa xarafka lanbar ka danbeeya way kuu waynayasaa
 # upper()
 # lewer()
-# cap
+# capitalize
 #----------------------------------
 
 Msg = "    Waxaan Jeclay Python  ilaa 3sano "
@@ -96,10 +96,10 @@ print(Msg1.rstrip("#"))
 print(len(Msg))
 
 # title()
-print(Msg.title())
+print(Msg.title()) # Waxaan Jeclay Python  Ilaa 3Sano
 
 # upper()
-print(Msg.upper())
+print(Msg.upper()) # WAXAAN JECLAY PYTHON  ILAA 3SANO
 
 
 #lower()
