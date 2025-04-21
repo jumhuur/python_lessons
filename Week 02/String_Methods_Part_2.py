@@ -39,5 +39,23 @@ print(text.find("Js", 7))
 print(text.find("Js", 14, 20))
 print(text.find("Js", 4, 4)) # if text is not found result is -1
 
+# rjust(width, fill char)
+name = "jumhuur"
+print(name.rjust(10,"$"))
+#ljust (width, fill char)
+print(name.ljust(10,"@"))
+
+lines = '''waxaan ahay 
+maxamad
+waxaan dhigtaa luuqada 
+python iyo js
+'''
+print(lines.splitlines())
+
+# expendtaps (dib ayaa fahankeeda loo eegayaa taas)
+tap_text = "jumhuur taysiir online"
+print(tap_text.expandtabs(2))
+
+
 
 
