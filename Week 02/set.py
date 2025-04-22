@@ -70,3 +70,87 @@ print(a)
 a.clear()
 print("set cleared",a)
 
+
+# diffrance (set - set)
+d = {1,2,3,4,5,6,"e","x"}
+f = {1,2,3,"r","x"}
+
+print("-------difference--------")
+diff = d.difference(f)
+print(d)
+print(f)
+print(diff)
+
+# diffrance update
+
+print("-------difference update--------")
+# waxa u samaynayaa set-ka loo adeegsaday method-ka
+# difference_update ayuu ku ridayaa waxii farqi ah 
+# isagoo ka saaraya waxii hore ugu jiray 
+d.difference_update(f)
+print(d)
+print(f)
+
+
+# intersection  (m & f)
+print("-------intersection--------")
+m = {1,2,3,"f", "x"}
+n = {2, 9,8,7, "o", "x"}
+
+inter = m.intersection(n)
+print(m)
+print(n)
+print(inter)
+
+
+# intersection_update
+print("-------intersection_update--------")
+w = {1,2,3,"f", "x"}
+v = {2, 9,8,7, "o", "x"}
+w.intersection_update(v)
+print(w) # waxii asalka ahaa wu ka saaray kaliya waxa uu galiyay waxii ay iskaga mid ahaayeen
+print(v)
+
+
+# symmetric_difference
+print("-------symmetric_difference--------")
+T = {1,2,3,"f", "x"}
+Q = {2, 9,8,7, "o", "x"}
+sem = T.symmetric_difference(Q)
+print(T) # waxii asalka ahaa wu ka saaray kaliya waxa uu galiyay waxii ay iskaga mid ahaayeen
+print(Q)
+print(sem)
+
+# symmetric_difference_update
+print("-------symmetric_difference_update--------")
+T = {1,2,3,"f", "x"}
+Q = {2, 9,8,7, "o", "x"}
+T.symmetric_difference_update(Q)
+print(T) # waxii asalka ahaa wu ka saaray kaliya waxa uu galiyay waxii ay iskaga mid ahaayeen
+# print(Q)
+# print(sem)
+
+# issuperset
+print("-------issuperset--------")
+ee = {1,6,7,8}
+rr = {4,3,1,6,7,8}
+print(rr.issuperset(ee)) # True
+
+
+# issubset
+print("-------issubset--------")
+ee = {1,6,7,8}
+rr = {4,3,1,6,7,8}
+print(ee.issubset(rr)) # True
+
+# isdisjoin
+print("-------isdisjoin--------")
+ee = {1,6,7,8}
+rr = {4,3,90,}
+print(ee.isdisjoint(rr)) # True
+
+
+
+
+
+
