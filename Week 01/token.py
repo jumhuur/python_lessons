@@ -1,8 +1,8 @@
 
 # Given total words
 myprice = 5.00
-User_Words =  9
-Chat_Words  = 126
+User_Words =  3000
+Chat_Words  = 4000
 
 # Estimate total tokens (average of 0.75 tokens per word)
 total_tokens_user = User_Words * 0.75
@@ -19,4 +19,4 @@ output_cost = (total_tokens_Chat * 0.06) / 1000 # type: ignore
 # Total cost for 976 words
 total_cost = input_cost + output_cost
 # total_tokens, input_cost, output_cost, total_cost
-print('NewPrice is  ${myprice - }')
+print(f'NewPrice is {total_cost}')
