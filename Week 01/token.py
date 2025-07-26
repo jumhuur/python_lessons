@@ -1,8 +1,8 @@
 
 # Given total words
 myprice = 5.00
-User_Words =  3000
-Chat_Words  = 4000
+User_Words =  44569
+Chat_Words  = 87963
 
 # Estimate total tokens (average of 0.75 tokens per word)
 total_tokens_user = User_Words * 0.75

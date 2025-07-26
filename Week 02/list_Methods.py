@@ -33,7 +33,6 @@ listOne.remove("a")
 print(listOne)
 
 # copy
-
 coped_list = listOne.copy()
 listOne.append("cali")
 print(coped_list)
@@ -51,6 +50,7 @@ print(listOne.index("cali"))
 listOne.insert(0, "online")
 listOne.insert(-1, "dugsiiye")
 print(listOne)
+
 #pop
 removed = listOne.pop(1)
 print("Waxaa la saaray",removed)
@@ -60,6 +60,11 @@ print("Waxaa la saaray",removed)
 listOne.clear()
 print(listOne)
 
+
+
+list = [1,2,3,4]
+list[len(list) - 1] = 10;
+print(len(list)) # ?
 
 
 

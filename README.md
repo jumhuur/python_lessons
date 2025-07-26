@@ -2,16 +2,16 @@
 
 ### Week 01
 
-#### - Comments
+- Comments
 
-#### - concations
+- concations
 
-#### - dataTypes
+- dataTypes
 
-#### - escape_sequence
+- escape_sequence
 
-#### - string Methods Part One
+- string Methods Part One
 
-#### - string Methods Part two
+- string Methods Part two
 
-#### - variables
+- variables
