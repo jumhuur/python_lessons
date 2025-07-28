@@ -3,30 +3,58 @@ list = [10,90,34,77,10,-34]
 alph_list = [""]
 newlist = [12,99]
 print(list)
-
-# append
+## append
+# waxa uu ku  shayga xaga ugu danbeeya 
+# hadaad u adeegsato list kalana waxa uu ka dhigaya 
+# one element
 list.append(150)
 # list.append(newlist)
 print(list)
-#sort()
-list.sort()
-print(list)
-
-# Sort With reverse
-list.sort(reverse=True)
-print(list)
-list.sort(reverse=False)
-print(list)
-
-# reverse
-list.reverse()
-print("reversed List", list)
 
 #extend
 listOne = ["a", "b", "c", "c", "c"]
 listTwo = ["e", "f"]
 listOne.extend(listTwo)
 print(listOne)
+
+
+# reverse
+list.reverse()
+print("reversed List", list)
+
+
+#sort()
+list.sort()
+print(list)
+
+# Sort With reverse
+list.sort(reverse=True)
+# hadii reverse ay tahay True 
+# waxa u kala horaysiinaysaa siday  u kala badan yihiin 
+# tusaale ahaan 120 waxaa ka soo horaynaya 121
+print(list)
+list.sort(reverse=False)
+# hadii reverse ay tahay Flase 
+# waxa u kala horaysiinaysaa siday  u kala Yar yihiin 
+# tusaale ahaan 121 waxaa ka soo horaynaya 120
+print(list)
+
+
+## reverse()
+# waxa uu kaga duwan yahay tii hore waxa uu kuu 
+# kala tartiibin karaa 
+# waxii xarfo ah sida names-ka oo kale iyo sidoo kale 
+# waxii numbers ah 
+
+TestReverse = [120,121,"A", "C", "B"]
+TestReverse.reverse()
+print(TestReverse) # ['B', 'C', 'A', 121, 120]
+
+
+
+
+
+
 
 # remove
 listOne.remove("a")

@@ -10,7 +10,7 @@ print(my_tuple[-4])
 # anther way to white tuple in py 
 new_tuple = "muuse", 123, False , True, 11.22
 print(type(new_tuple))
-print(type(my_tuple))
+print(type(my_tuple)) 
 
 # you cant update
 # new_tuple[0] = "python"
@@ -26,7 +26,12 @@ oneElment2 = ("maxaamad")
 print(type(oneElment1)) # <class 'str'>
 print(type(oneElment2)) # <class 'str'>
 
-#change to tuple 
+## change to tuple 
+# si aad u cadayso in tuple ay tahay laakiin 
+# ka kooban hal shay oo kaliya waxaad u baahanrtahay 
+# inaad , dhigto element-ga dhamaadkiisa 
+# sidan hoose oo kale 
+
 oneElment1_1 = "mukhtaar",
 oneElment2_2 = ("maxaamad",)
 print(type(oneElment1_1)) # <class 'tuple'>
@@ -52,8 +57,8 @@ print(newlist * 2) # [12, 13, 12, 13]
 print(newstr * 2) # 2222
 
 # count 
-print(numbers.count(9))
-print("number 9 in this list {1:d} and {0:d} pos".format(numbers.count(9), 10))
+print("count",numbers.count(9))
+print("number 9 in this list {1:d} and {0:d} pos".format(numbers.count(9), numbers.index(9)))
 
 # index
 print(newlist.index(13))

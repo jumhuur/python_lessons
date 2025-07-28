@@ -77,6 +77,7 @@ print(mymessage[::3]) #iayaa qmlaaym s
 # upper()
 # lewer()
 # capitalize
+# len
 #----------------------------------
 
 Msg = "    Waxaan Jeclay Python  ilaa 3sano "
@@ -84,7 +85,7 @@ Msg1 = "#######waxaan jeclahay Python#######"
 
 #strip()
 print(Msg.strip())
-print(Msg1.strip("#"))
+print(Msg1.strip("#"))  # hadii  shay lagu qoro shaygaas ayay saaraysaa sida hada ka muuqata bilawga laynkan 
 #lstrip()  waxay ka jaraysaa midigta
 print(Msg.lstrip())
 print(Msg1.lstrip("#"))
@@ -121,6 +122,9 @@ print(a.zfill(4))
 print(b.zfill(4))
 print(c.zfill(4))
 print(d.zfill(4))
+
+# len 
+print(len(Msg))
 
 
 

@@ -4,10 +4,10 @@ My_name_2 = "maxamad_dayib_cabdi"
 My_name_3 = "maxamad-dayib-cabdi"
 splited = My_name.split()
 print(splited)
-print(My_name_2.split("_"))
+print(My_name_2.split("_")) 
 
 # max split in py 
-print(My_name_3.split("-", 1))
+print(My_name_3.split("-", 3))
 
 # center(width, fillchar)
 text = "I love Python An Js"
@@ -45,6 +45,9 @@ print(name.rjust(10,"$"))
 #ljust (width, fill char)
 print(name.ljust(10,"@"))
 
+
+##splitlines 
+# waxay ku sinaysaa lines-kaagii oo ah array line walba element ayay kaaga dhigaysaa
 lines = '''waxaan ahay 
 maxamad
 waxaan dhigtaa luuqada 
@@ -52,9 +55,20 @@ python iyo js
 '''
 print(lines.splitlines())
 
-# expendtaps (dib ayaa fahankeeda loo eegayaa taas)
-tap_text = "jumhuur taysiir online"
-print(tap_text.expandtabs(2))
+## expendtaps (dib ayaa fahankeeda loo eegayaa taas)
+# waxay samaynaysaa tabs - taas o aad xukumi karto inta tab ee aad rabto sidan hooose 
+tap_text = "jumhuur\ttaysiir\tonline"
+print(tap_text.expandtabs(20)) # laba tab 
+
+
+## count
+# waxa uu kuu sheegay inta jeer ee kalmadan ku jirto hadalka
+Mystr = "ilove python and js"
+print(Mystr.count("js", 0, 16))
+print(Mystr.count("js", 10, 20))
+
+# mynameTest = "maxamad dayib cabdi"
+# print(mynameTest.split(" "))
 
 
 

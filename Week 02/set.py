@@ -85,17 +85,20 @@ print(diff)
 
 print("-------difference update--------")
 # waxa u samaynayaa set-ka loo adeegsaday method-ka
-# difference_update ayuu ku ridayaa waxii farqi ah 
+# Original set ayuu ku ridayaa waxii farqi ah 
 # isagoo ka saaraya waxii hore ugu jiray 
 d.difference_update(f)
 print(d)
 print(f)
 
 
-# intersection  (m & f)
+## intersection  (m & f)
+# hadaad soo daabacdo waxa uu kuu siinayaa 
+# elements-ku ay iskaga mid yiihiin sets-yadu
+
 print("-------intersection--------")
 m = {1,2,3,"f", "x"}
-n = {2, 9,8,7, "o", "x"}
+n = {2, 9,8,7, "o", "x"} 
 
 inter = m.intersection(n)
 print(m)
@@ -105,6 +108,9 @@ print(inter)
 
 # intersection_update
 print("-------intersection_update--------")
+# waxa u samaynayaa set-ka loo adeegsaday method-ka
+# Original set ayuu ku ridayaa waxii iska mid yihiin 
+# isagoo ka saaraya waxii hore ugu jiray 
 w = {1,2,3,"f", "x"}
 v = {2, 9,8,7, "o", "x"}
 w.intersection_update(v)
