@@ -1,6 +1,5 @@
 # Week 02 String Methods
 
-
 # Exercises 01
 # Magac user ah oo leh faaruqyo badan.
 username = "   Maxamad Dayib   "
@@ -73,6 +72,7 @@ print(kal_saar)
 print(" ".join(kal_saar))
 # Bedel magaca labaad "Maxamad" → "Dayib"
 # Output: "My name is Maxamad Dayib"
+
 
 
 
