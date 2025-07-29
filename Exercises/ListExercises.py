@@ -29,7 +29,7 @@ print(a)
 
 # Exercise 04
 colors = ["red", "blue", "green", "blue"]
-colors.pop(1)
+colors.remove("blue")
 print(colors)
 # Ka saar "blue" ugu horeeya
 # Output: ['red', 'green', 'blue']

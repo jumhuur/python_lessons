@@ -63,10 +63,69 @@ print(numbers)
 alllist = numbers.copy()
 print(alllist)
 
+
+
+## len
+# 👉 waxa uu ku siinayaa inta items ee liiskaaga  ka kooban yahay 
+print(len(ls))
+
 ## clear
 # 👉 Waxay tirtirtaa dhammaan element-yada list-ka.
 ls.clear()
 print(ls) # []
+
+
+## slicing 
+#👉 Waa maxay slicing?
+#Slicing waa hab aad qayb uga goyn karto list (ama string) adigoo isticmaalaya [:] syntax.
+# list[start:stop:step]
+
+numbers = [10, 20, 30, 40, 50, 60]
+
+#🎯 1. Qayb ka bilowso index 1 ilaa 3
+qaybt1 = numbers[1:3]
+print(numbers)
+print(qaybt1)
+
+#🎯 2. Ka bilaab bilowga ilaa index 2
+print(numbers[0:3])
+
+#🎯 3. Ka bilaab index 2 ilaa dhammaad
+print(numbers[2:])
+
+#🎯 4. Copy liiska oo dhan
+print(numbers[:])
+
+#🎯 5. Bood 2 kasta
+print(numbers[::2]) # ?
+
+
+#🎯 6. Rog liiska (reverse)
+print(numbers[::-1])
+
+#🔄 QAYBTA 2: Nested Lists
+#👉 Waa maxay nested list?
+#Nested list waa liis ku jira liis kale. Waxaa loo isticmaalaa in lagu kaydiyo xog is dhexgal ah sida tiirar iyo safaf (rows and columns).
+
+#✅ Tusaale guud:
+matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+#🎯 1. Hel row-ga labaad
+print(matrix[1])  # [4, 5, 6]
+#🎯 2. Hel item-ka 5
+print(matrix[1][1])  # 5
+#🎯 3. Hel item-ka 9
+print(matrix[2][2])  # 9
+#🎯 4. Dhex gal liis nested ah:
+data = ["name", [1, 2, 3], True]
+print(data[1][0])  # 1
+
+
+
+
 
 
 

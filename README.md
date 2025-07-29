@@ -1,6 +1,6 @@
-## python_lessons
+## Python_Lessons
 
-### Week 01
+# Week 01
 
 - Comments
 
