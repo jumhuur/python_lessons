@@ -1,39 +1,72 @@
 # Type Conversion
-# mystr= "jumhuur"
-# myint = 40
-# mybool = False
-# myfloat = 90.99
-# myset = ("1", "maxamad", "jumhuur")
-# mylist = ["2", "online", "Python", True, False]
-# myTuple = {"3", "Hamse", "Abuisxaaq", "ducaale"}
-# mydict = {"name": "jumhuur", "Job": "Full_Stack_dev", "age": 26.5}
-# # print(type(mystr))
-# print(type(myint))
-# print(type(mybool))
-# print(type(myfloat))
-# print(type(myset))
-# print(type(mylist))
-# print(type(myTuple))
-# # convert to 
-# print("-------- To strt -------")
-# print(type(str(myint)))
-# print(type(str(mybool)))
-# print(type(str(myfloat)))
-# print(type(str(myset)))
-# print(type(str(mylist)))
-# print(type(str(myTuple)))
-# print(type(str(mydict)))
-# print(type(str(myint)))
+a = 10 # int
+b = "10" # string
+c = 10.0 # floting
+d = ["maxamad", 12, False] # list
+e = {"muuse", "ayaan", "cali"} # set
+f = ("784",44,55,66,77,)  # tuple
+j = {"name": "maxamad", "age": 45} # dict
+# print(type(a))
+# print(type(b))
+# print(type(c))
+# print(type(d))
+# print(type(e))
+# print(type(f))
+# print(type(j))
 
-# print("-------- To int -------")
-# print(type(int(myint)))
-# print(type(int(mybool)))
-# print(type(int(myfloat)))
-# print(type(int(myset)))
-# print(type(int(mylist)))
-# print(type(int(myTuple)))
-# print(type(int(mydict)))
-# print(type(int(mystr)))
+
+# convert
+
+# tuple 
+# print(tuple(a)) # TypeError: 'int' object is not iterable 
+print(tuple(b)) 
+# print(tuple(c))TypeError: 'float' object is not iterable 
+print(tuple(d))
+print(tuple(e))
+print(tuple(f))
+print(tuple(j))
+
+
+# list
+#print(list(a)) # TypeError: 'int' object is not iterable 
+print(list(b)) 
+#print(list(c)) #TypeError: 'float' object is not iterable 
+print(list(d))
+print(list(e))
+print(list(f))
+print(list(j))
+
+print("*" * 30)
+# set
+#print(set(a)) # TypeError: 'int' object is not iterable 
+print(set(b)) 
+#print(set(c)) #TypeError: 'float' object is not iterable 
+print(set(d))
+print(set(e))
+print(set(f))
+print(set(j))
+
+
+print("*" * 30)
+# dict
+#print(dict(a)) # TypeError: 'int' object is not iterable 
+#print(dict(b))  # ValueError: dictionary update sequence element #0 has length 1; 2 is required
+#print(dict(c)) #TypeError: 'float' object is not iterable 
+# print(dict(d)) # ValueError: dictionary update sequence element #0 has length 7; 2 is required
+# print(dict(e)) # ValueError: dictionary update sequence element #0 has length 7; 2 is required
+# print(dict(f))
+print(dict(j))
+
+# waxaa suura galk in tuple list  uu badalo
+# waa hadii key iyo value wax u dhigma la hello sidan hoose oo kale 
+
+test1list = [["name", "maxamad"], ["age", 20]]
+test1tuple = (("name", "maxamad"), ("age", 20))
+print(dict(test1list))
+
+
+
+
 
 
 
