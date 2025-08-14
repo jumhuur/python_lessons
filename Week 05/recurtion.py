@@ -81,5 +81,15 @@ print(kalarog)
 
 
 
+def iskugayn(*listNumbers):
+    result = 0
+    for Number in listNumbers:
+        result += Number
+    return result
+print(iskugayn(10,5))
+    
+
+
+
 
 
