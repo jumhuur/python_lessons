@@ -1,8 +1,8 @@
 # xisaabta bishii
-import termcolor, pyfiglet
+import termcolor
 kiro = [{"Hore": [800,1154], "08/2025":[100,150,200,50,150,150,135,50]}]
 baxay = [170,105,200,20,100]
-amaah = [{"Hinda": [10,15,5,3.50],"Maxamad": [46], "Maxamad_Yuusuf": [50], "Naasir": [50], "c/shakuur": [200]}]
+amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [46], "Maxamad_Yuusuf": [50], "Naasir": [50], "c/shakuur": [200]}]
 def Amaah_le():
     for Amaah in amaah:
         Hinda = sum(Amaah.get("Hinda"))
@@ -24,6 +24,6 @@ Total_Guud = Total_Kiro - Total_baxay
 LaHayo = Total_Guud - Amaah_le()
 print(f"Waxaa la doonayay inuu soo hadho :{Total_Guud}$")
 print(f"waxaa maqan {Total_Guud - LaHayo}$")
-print(f"Waxaa la Hayaa {LaHayo}$")
+print(f"Waxaa la Hayaa {termcolor.colored(LaHayo, "blue")}$")
 # print(f"Main Total: {termcolor.colored(Account_Total + LaHayo, "blue")}$")
 
