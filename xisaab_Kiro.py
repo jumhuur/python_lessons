@@ -3,7 +3,7 @@ import termcolor
 kiro = [{"Account": [2307.50], "8":[100,150,200,50,150,150,135,50,165,150], "9": [300, 200,100]}]
 baxay = [{"8":[183.50,105,200,20,100,25,15,150],"9":[130] }]
 amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200]}]
-account_out = [650,20,5,8]
+account_out = {"laptops": [650,20,5,8]}
 def Amaah_le():
     for Amaah in amaah:
         Hinda = sum(Amaah.get("Hinda"))
@@ -16,9 +16,14 @@ def Baxay(bil):
         #   print(OneBaxay.get(bil))
           return OneBaxay.get(bil)
 def Account_out_bill():
-    #  for cash in account_out:
-    #       return sum(cash)
-    return sum(account_out)
+     print(termcolor.colored("Xisaabta Akoonka-ka".title(), "blue"))
+     Total = 0
+     for cash_key, cash_value in account_out.items():
+          print(f"#-{cash_key} : {sum(cash_value)}")
+          Total += sum(cash_value)
+     print(f"Total Baxay: {termcolor.colored(Total, "red")}".capitalize())
+     return Total
+
 def ChooseMonth():
     bilo = []
     print(termcolor.colored("Fadlan Dooro Bisha".title(), "blue"))
@@ -43,10 +48,13 @@ def ChooseMonth():
     elif Bisha.strip().upper() == "A":
         for Account in kiro:
              Total_Account = sum(Account.get("Account"))
-             print(Total_Account - Account_out_bill())
+             print(f"Total Akoon-ka : {termcolor.colored(Total_Account - Account_out_bill(), "magenta")}")
     else :
         print(termcolor.colored("Si sax waxba umaad dooran".title(), "red"))
 ChooseMonth()
+
+# print(dir(termcolor))
+# print(termcolor.COLORS)
 
 
 
