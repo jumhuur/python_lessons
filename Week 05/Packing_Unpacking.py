@@ -43,6 +43,13 @@ def show_skills(name="null",*OutProg, **with_Prog):
 
 show_skills("Jumhuur", *with_outProg, **with_Prog)
 
+def showskill(**skills):
+    print(type(skills))
+    for skill, value in skills.items():
+        print(f"--- {skill} - {value}")
+
+showskill(html = "80", css="50%")
+
 
 
 

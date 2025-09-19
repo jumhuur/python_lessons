@@ -17,7 +17,6 @@ for text in formated:
 # Example 02
 items = [["ss", "aa", 2020], {"name": "maxamad"}, 45, 77, 1.22,25.22, "nimcaan", (1,2,3)]
 check = map(lambda item : f"{item} type is {type(item)}",items)
-
 for ck in check:
     print(ck)
 
