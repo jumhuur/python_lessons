@@ -31,6 +31,7 @@ def filterNum(number):
     return number + number >= 100
 
 data = filter(filterNum, numbers)
+print(data)
 for result in  data:
     print(result)
 

@@ -1,24 +1,24 @@
-# # user input
+# user input
 
-# fname = input("magacaa 1aad")
-# mname = input ("magac labaad")
-# lname = input("magaca 3aad")
+fname = input("magacaa 1aad")
+mname = input ("magac labaad")
+lname = input("magaca 3aad")
 
-# fname = fname.strip().capitalize()
-# mname = mname.strip().capitalize()
-# lname = lname.strip().capitalize()
-# print(f"soo dhawaaw {fname} {mname:.1s} {lname}")
+fname = fname.strip().capitalize()
+mname = mname.strip().capitalize()
+lname = lname.strip().capitalize()
+print(f"soo dhawaaw {fname} {mname:.1s} {lname}")
 
 
 
-# # slice Email
-# thename = input("Your name ? ").strip().capitalize()
-# theemail = input("Your Email ?").strip()
+# slice Email
+thename = input("Your name ? ").strip().capitalize()
+theemail = input("Your Email ?").strip()
 
-# theusername = theemail[:theemail.index("@")]
-# thewebsite = theemail[theemail.index("@") + 1:]
+theusername = theemail[:theemail.index("@")]
+thewebsite = theemail[theemail.index("@") + 1:]
 
-# print(f"soo dhawaaw {thename} \nyour email is {theemail} \nyour username is {theusername} \nand your website is {thewebsite} ")
+print(f"soo dhawaaw {thename} \nyour email is {theemail} \nyour username is {theusername} \nand your website is {thewebsite} ")
 
 
 # Practical Your age
