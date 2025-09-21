@@ -1,5 +1,7 @@
 # xisaabta bishii
 import termcolor
+from datetime import datetime
+# Days = ["sabti", "axad", "Isniin", "salaasa" , "Arbaca", "Khamiis", "Jimce"]
 kiro = [{"Account": [2307.50], "8":[100,150,200,50,150,150,135,50,165,150], "9": [300, 200,100,150]}]
 baxay = [{"8":[183.50,105,200,20,100,25,15,150],"9":[130,100] }]
 amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200]}]
@@ -19,9 +21,9 @@ def Account_out_bill():
      print(termcolor.colored("Xisaabta Akoonka-ka".title(), "blue"))
      Total = 0
      for cash_key, cash_value in account_out.items():
-          print(f"#-{cash_key} : {sum(cash_value)}")
+          print(f"#-{cash_key} : {sum(cash_value)}$")
           Total += sum(cash_value)
-     print(f"Total Baxay: {termcolor.colored(Total, "red")}".capitalize())
+     print(f"Total Baxay: {termcolor.colored(Total, "red")}$".capitalize())
      return Total
 
 def ChooseMonth():
@@ -45,10 +47,12 @@ def ChooseMonth():
             Total_Guud = Total_Kiro - Total_baxay
             print(f"Waxaa la doonayay inuu soo hadho:{Total_Guud}$".title())
             print(f"Total Dhaba {termcolor.colored(Total_Guud, "blue")}$")
+            print(f"Taariikhda Maanta:" , datetime.now().strftime("%d-%b-%y"), "Time:" , datetime.now().strftime("%H:%M:%p"))
     elif Bisha.strip().upper() == "A":
         for Account in kiro:
              Total_Account = sum(Account.get("Account"))
-             print(f"Total Akoon-ka : {termcolor.colored(Total_Account - Account_out_bill(), "magenta")}")
+             print(f"Total Akoon-ka : {termcolor.colored(Total_Account - Account_out_bill(), "magenta")}$")
+             print(f"Taariikhda Maanta:" , datetime.now().strftime("%d-%b-%y"), "Time:" , datetime.now().strftime("%H:%M:%p"))
     else :
         print(termcolor.colored("Si sax waxba umaad dooran".title(), "red"))
 ChooseMonth()
