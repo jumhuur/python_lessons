@@ -2,9 +2,9 @@
 import termcolor
 from datetime import datetime
 # Days = ["sabti", "axad", "Isniin", "salaasa" , "Arbaca", "Khamiis", "Jimce"]
-kiro = [{"Account": [2307.50], "8":[100,150,200,50,150,150,135,50,165,150], "9": [300, 200,100,150]}]
+kiro = [{"Account": [2307.50], "8":[100,150,200,50,150,150,135,50,165,150], "9": [150,200,154,150,150,100]}]
 baxay = [{"8":[183.50,105,200,20,100,25,15,150],"9":[130,100] }]
-amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200]}]
+amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200],"cabdicasiis": [220]}]
 account_out = {"laptops": [650,20,5,8]}
 def Amaah_le():
     for Amaah in amaah:
