@@ -1,10 +1,9 @@
-# xisaabta bishii
+# Xisaabta Lacagaha Guryaha Kirada ah 
 import termcolor
 from datetime import datetime
-# Days = ["sabti", "axad", "Isniin", "salaasa" , "Arbaca", "Khamiis", "Jimce"]
-kiro = [{"Account": [2307.50], "8":[100,150,200,50,150,150,135,50,165,150], "9": [150,200,154,150,150,100]}]
+kiro = [{"Account": [2307.50], "8":[100,150,200,50,150,150,135,50,165,150], "9": [150,200,154,150,150,100,162]}]
 baxay = [{"8":[183.50,105,200,20,100,25,15,150],"9":[130,100] }]
-amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200],"cabdicasiis": [220]}]
+amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200],"cabdicasiis": []}]
 account_out = {"laptops": [650,20,5,8]}
 def Amaah_le():
     for Amaah in amaah:
@@ -54,11 +53,9 @@ def ChooseMonth():
              print(f"Total Akoon-ka : {termcolor.colored(Total_Account - Account_out_bill(), "magenta")}$")
              print(f"Taariikhda Maanta:" , datetime.now().strftime("%d-%b-%y"), "Time:" , datetime.now().strftime("%H:%M:%p"))
     else :
-        print(termcolor.colored("Si sax waxba umaad dooran".title(), "red"))
+        #print(termcolor.colored("Si sax waxba umaad dooran".title(), "red"))
+        raise ValueError(termcolor.colored("Si sax waxba umaad dooran".title(), "red"))
 ChooseMonth()
-
-# print(dir(termcolor))
-# print(termcolor.COLORS)
 
 
 
