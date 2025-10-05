@@ -1,10 +1,11 @@
 # Xisaabta Lacagaha Guryaha Kirada ah 
 import termcolor
 from datetime import datetime
-kiro = [{"Account": [2307.50], "8":[100,150,200,50,150,150,135,50,165,150], "9": [150,200,154,150,150,100,162]}]
-baxay = [{"8":[183.50,105,200,20,100,25,15,150],"9":[130,100] }]
-amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200],"cabdicasiis": []}]
+kiro = [{"Account": [2307.50], "8":[100,150,200,50,150,150,135,50,165,150], "9": [150,200,154,150,150,100,162], "10": [150,150]}]
+baxay = [{"8":[183.50,105,200,20,100,25,15,150],"9":[130,100],"10":[130] }]
+amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200],"cabdicasiis": [55]}]
 account_out = {"laptops": [650,20,5,8]}
+Numbers = [{"name":"Hodan", "number": 1234567890}, {"name":"Maxamad", "number": 1234567890}, {"name":"Naasir", "number": 1234567890}, {"name":"c/shakuur", "number": 1234567890}, {"name":"cabdicasiis", "number": 1234567890}]
 def Amaah_le():
     for Amaah in amaah:
         Hinda = sum(Amaah.get("Hinda"))
@@ -24,11 +25,16 @@ def Account_out_bill():
           Total += sum(cash_value)
      print(f"Total Baxay: {termcolor.colored(Total, "red")}$".capitalize())
      return Total
+def ShowNumbers():
+    for number in Numbers:
+          print(f"{number['name']} : {number['number']}".title())
+    print("Time: ", datetime.now().strftime("%H:%M:%p"))
+
 
 def ChooseMonth():
     bilo = []
     print(termcolor.colored("Fadlan Dooro Bisha".title(), "blue"))
-    for number in range(8,10):
+    for number in range(8,11):
         bilo.append(str(number))
         print(f"{str(number).zfill(2)} - bisha {number}aad".title())
     Bisha = input("Qor bisha ")
@@ -52,6 +58,9 @@ def ChooseMonth():
              Total_Account = sum(Account.get("Account"))
              print(f"Total Akoon-ka : {termcolor.colored(Total_Account - Account_out_bill(), "magenta")}$")
              print(f"Taariikhda Maanta:" , datetime.now().strftime("%d-%b-%y"), "Time:" , datetime.now().strftime("%H:%M:%p"))
+    elif Bisha.strip().upper() == "N":
+        print(termcolor.colored("Lanbarada dhamaan Macaamiisha".title(), "blue"))
+        ShowNumbers()
     else :
         #print(termcolor.colored("Si sax waxba umaad dooran".title(), "red"))
         raise ValueError(termcolor.colored("Si sax waxba umaad dooran".title(), "red"))

@@ -49,10 +49,10 @@ ValidWeb = re.findall(r"^(?:https?://)?(?:www\.)?(?:\w+\W?\w+).(?:net|com)$", "h
 Mywbsites = []
 
 if ValidWeb :
-    print(ValidWeb)
     for web in ValidWeb:
         print(web)
         Mywbsites.append(web)
+        print(Mywbsites)
 
 else:
     raise Exception("Fadlan Qor Website-sax!")
