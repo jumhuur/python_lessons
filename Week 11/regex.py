@@ -17,7 +17,7 @@
 
 import re
 
-# Email_patt = r"[A-z0-9\.]+@[a-z]+.\w{1,}"
+# Email_patt = r"[A-Za-z0-9\W?]+?[A-Za-z0-9]@[a-z]+.\w{1,}"
 # mystring = re.search(Email_patt, "jumhuur123@gmail.com")
 # print(mystring)
 
@@ -43,7 +43,7 @@ for index , group in enumerate(My_Testing.groups(), start=1):
     print(f"{index}) {group}")
 
 # Example 2 check email
-ValidWeb = re.findall(r"^(?:https?://)?(?:www\.)?(?:\w+\W?\w+).(?:net|com)$", "https://www.taysiir.com")
+ValidWeb = re.findall(r"^(?:https?://)?(?:www\.)?(?:\w+\W?\w+).(?:net|com)$", "https://www.taysiir.com", re.VERBOSE)
 # print(ValidWeb)
 
 Mywbsites = []
@@ -57,4 +57,51 @@ if ValidWeb :
 else:
     raise Exception("Fadlan Qor Website-sax!")
 
+emails = []
 
+def RegEmail():
+    tray = 5
+    while tray > 0:
+        UserEmail = input("Your Email: ")
+        Email_patt = r"^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.-]+(\.[A-Za-z]{2,})$"
+        emailCheck = re.match(Email_patt, str(UserEmail.strip()))
+        if emailCheck:
+            emails.append(str(UserEmail).lower().strip())
+            print("Your Email is valid")
+            tray -= 1
+            if len(emails) > 0:
+                for index , email in enumerate(emails, start=1):
+                    print(f"{index}: {email}")
+        else :
+            raise Exception("Your Email Is Not Valid")
+
+# RegEmail()
+
+print(dir(re.match))
+Valid = re.match(r"^[A-Za-z0-9._%+\-]+@[A-Za-z0-9]+(\.[A-Za-z]{2,})$", "j@gmail.com.net")
+Valid2 = re.search(r"^[A-Za-z0-9._%+\-]+@[A-Za-z0-9]+(\.[A-Za-z]{2,})$", "j@gmail.com.net")
+print(Valid)
+print(Valid2)
+
+
+
+# split(pattern, string, maxsplit)
+str_one = "Waxaan Jeclahay Luuqada Python"
+searchstr = re.split(r"\s", str_one)
+print(searchstr)  # meel kasta oo space ku jirto wuu ku lala jaray waxana uu ka dhigay ilaa  4 qaybood
+
+
+# max split
+str_two = "Waxaan Jeclahay Luuqada Python"
+searchstr_1 = re.split(r"\s", str_two, maxsplit=1)
+print(searchstr_1)
+ 
+
+str_three = "Waxaan_Jeclahay#Luuqada-Python=Wayo"
+searchstr_three = re.split(r"_|-|#|=", str_three)
+print(searchstr_three)
+
+
+# sub(pattern, rep, string , counreplays)
+print(re.sub(r"\s", "-", str_two))
+print(re.sub(r"\s", "-", str_two, 2))

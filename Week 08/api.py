@@ -12,7 +12,7 @@ def ShowData():
             print(f'--- {Product["price"]}$')
             AllPrice.append(Product["price"])
         print(termcolor.colored(pyfiglet.figlet_format(f"{sum(AllPrice)}$"), "blue"))
-ShowData()
+# ShowData()
 
 
 
@@ -35,6 +35,26 @@ def GetRandomMeal():
                 print(f"{index + 1} - {termcolor.colored(value, colors[index])}")
     else :
         print(response.json())
-GetRandomMeal()
+# GetRandomMeal()
+
+
+def Api_Test():
+    url = "https://booking-com.p.rapidapi.com/v1/hotels/locations"
+    querystring = {"name":"landon","locale":"en-gb"}
+    headers = {
+        "x-rapidapi-key": "5de993e486mshc54b203ad97c00bp162403jsnbdcf2950d435",
+        "x-rapidapi-host": "booking-com.p.rapidapi.com"
+    }
+    response = requests.get(url, headers=headers, params=querystring)
+    print(response.json())
+    if response.status_code ==  200:
+        Hotels = response.json()
+        for Hotel in Hotels:
+            print(Hotel.get("name"))
+            print(Hotel.get("image_url"))
+    print(response.status_code)
+# Api_Test()
+
+
 
 
