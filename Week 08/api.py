@@ -55,6 +55,11 @@ def Api_Test():
     print(response.status_code)
 # Api_Test()
 
+ll = [{"name":"bob"},{"name": "poot"}]
+print(ll.index({"name":"bob"}))
+print(ll)
+# print(dir(list))
+
 
 
 
