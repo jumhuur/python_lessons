@@ -47,6 +47,9 @@ class Students :
             "Id": "STU005"
         }
     ]
+
+    def __len__(cls):
+        return f"Students Count {len(cls.students)}"
     @staticmethod
     def Welcome(name):
         return f"Welcome {name}"
@@ -94,8 +97,8 @@ class Students :
                 "course":course,
                 "Id": Id
             }
-            new_student = Students.students.append(new_obj)
-            return f"new info {new_obj}"
+            Students.students.append(new_obj)
+            return f"new Student Added"
     def __init__(self,Id):
         # Student = filter(lambda student : student.get("Id") == Id, Students.students)
         self.Info = next((std for std in Students.students if std["Id"] == Id), None)  #[std  for std in Student][0]
@@ -141,11 +144,13 @@ print(Students.Allstudents())
 print("*" * 45)
 updated = Students.update_student("STU001", "Asma", "Maxamad", 25, "Ibnu Baaz", 3, "caqiido")
 print(updated)
-
 print("*" * 45)
-add = Students.add_student("STU0078", "Asma", "Maxamad", 25, "Ibnu Baaz", 3, "caqiido")
+print(len(Students.students))
+print("*" * 45)
+add = Students.add_student("STU0078", "xamda", "Maxamad", 25, "Ibnu Baaz", 3, "caqiido")
 print(add)
-
+addstudents = Students.add_student("STU0079", "Muuna", "cimaraan", 28, "Ibnu Baaz", 3, "Maths")
+print(len(Students.students))
 
 
 
