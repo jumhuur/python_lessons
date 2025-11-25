@@ -24,13 +24,15 @@ print(len(name)) # 7
 
 class Teacher:
     teachers = []
-    def __init__(self, name, class_teacher):
+    def __init__(self, name, class_):
         self.name = name
-        self.class_teacher = class_teacher
+        self.class_ = class_
+
+    @property   
     def new(self):
         new_teacher = {
             "name": self.name,
-            "class_teacher" :self.class_teacher
+            "class_" :self.class_
         }
 
         Teacher.teachers.append(new_teacher)
@@ -48,13 +50,19 @@ class Teacher:
 
 class Admin(Teacher):
     # admins = []
-    def __init__(self, name, admin_title):
+    def __init__(self, name, admin_title,school, class_):
+        super().__init__(self, class_)
         self.name = name
         self.admin_title = admin_title
+        self.school = school
+ 
+
+    @property
     def new(self):
         new_admin = {
             "name": self.name,
-            "class_admin" :self.admin_title
+            "admin_title" :self.admin_title,
+            "class_": self.class_
         }
 
         Teacher.teachers.append(new_admin)
@@ -65,8 +73,9 @@ class Admin(Teacher):
         return f"Teachers count i {len(cls.admins)}"
 
 t = Teacher("maxamad", "4",)
-a = Admin("jimcaale", "IT Team Manager")
-print(Teacher("maxamad", "4",))
-# print(t.new())
-# print(a.new())
-# print(len(Teacher.teachers))
+a = Admin("jimcaale", "IT Team Manager", "tog", "tt")
+print(a)
+print(t.new)
+print(a.new)
+print(len(Teacher.teachers))
+print(a.class_)
