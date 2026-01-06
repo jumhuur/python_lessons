@@ -1,10 +1,10 @@
 # Xisaabta Lacagaha Guryaha Kirada ah 
 import termcolor
 from datetime import datetime
-kiro = [{"Account": [3425], "8":[100,150,200,50,150,150,135,50,165,150], "9": [150,200,154,150,150,100,162], "10": [150,150,150,150,150],"11": [150,150,150], "12": [150,250,150,150,150,300,90] , "1": [150, 100]}]
+kiro = [{"Account": [4275], "8":[100,150,200,50,150,150,135,50,165,150], "9": [150,200,154,150,150,100,162], "10": [150,150,150,150,150],"11": [150,150,150], "12": [150,250,150,150,150,300,90] , "1": [150, 100]}]
 baxay = [{"8":[183.50,105,200,20,100,25,15,150],"9":[130,100],"10":[130,100,50,38], "11": [130,100, 200], "12": [130,100,100,100], "1": [100] }]
 amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200,200],"cabdicasiis": [150,150,25], "nimcaan": [90] }]
-account_out = {"laptops": [650,20,5,8], "CCTV Camers" : [605], "Biyo galin": [480]}
+account_out = {"laptops": [650,20,5,8], "CCTV Camers" : [605], "Biyo galin": [480], "Nimcaan": [1000]}
 Numbers = [{"name":"Hodan", "number": "0634800679"}, {"name":"Maxamad Yuusuf", "number": "0634711700"}, {"name":"cabdi casiis", "number": "0634464640"}, {"name":"Xamse cabdi cali", "number": "0634471067"}, {"name":"cabdicasiis", "number": 1234567890}, {"name":"Mubaarik c/raxamaan", "number": "0634113016"}, {"name" :"Fuaad caqli nuux", "number": "0633514753"} ]
 def Amaah_le():
     for Amaah in amaah:
@@ -37,8 +37,6 @@ def ChooseMonth():
     # list_bilo = [nu_bil for nu_bil in kiro]
     To_dict = dict(kiro[0])
     list_bilo = [bil for bil in  To_dict.keys()]
-
-    print(list_bilo)
     for number in list_bilo:
         bilo.append(str(number))
         if number == "Account":
