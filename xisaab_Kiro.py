@@ -1,11 +1,12 @@
 # Xisaabta Lacagaha Guryaha Kirada ah 
 import termcolor
 from datetime import datetime
-kiro = [{"Account": [4275], "8":[100,150,200,50,150,150,135,50,165,150], "9": [150,200,154,150,150,100,162], "10": [150,150,150,150,150],"11": [150,150,150], "12": [150,250,150,150,150,300,90] , "1": [150, 100, 150]}]
-baxay = [{"8":[183.50,105,200,20,100,25,15,150],"9":[130,100],"10":[130,100,50,38], "11": [130,100, 200], "12": [130,100,100,100], "1": [100] }]
-amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50], "c/shakuur": [200,200],"cabdicasiis": [150,150,25], "nimcaan": [90] }]
-account_out = {"laptops": [650,20,5,8], "CCTV Camers" : [605], "Biyo galin": [480], "Nimcaan": [1000]}
-Numbers = [{"name":"Hodan", "number": "0634800679"}, {"name":"Maxamad Yuusuf", "number": "0634711700"}, {"name":"cabdi casiis", "number": "0634464640"}, {"name":"Xamse cabdi cali", "number": "0634471067"}, {"name":"cabdicasiis", "number": 1234567890}, {"name":"Mubaarik c/raxamaan", "number": "0634113016"}, {"name" :"Fuaad caqli nuux", "number": "0633514753"} ]
+kiro = [{"Account": [4275], "8-25":[100,150,200,50,150,150,135,50,165,150], "9-25": [150,200,154,150,150,100,162], "10-25": [150,150,150,150,150],"11-25": [150,150,150], "12-25": [150,250,150,150,150,300,90] , "1-26": [0], "2-26": [150, 100, 150, 170, 150, 150,150,200,150, 200] }]
+baxay = [{"8-25":[183.50,105,200,20,100,25,15,150],"9-25":[130,100],"10-25":[130,100,50,38], "11-25": [130,100, 200], "12-25": [130,100,100,100], "1-26": [100, 130,20,1440], "2-26": [130, 100, 240, 94,96,150,88,230,7,10,50] }]
+amaah = [{"Hinda": [10,15,5,3.50,40],"Maxamad": [37],  "Naasir": [50]}]
+Baxay_detailed = [{"2-26":{"Mukhtaar":[130], "Maxamad cali":[100, 50], "Maxamad dheere":[240], "Biyo_Barkad":[96], "Bil School": [94], "Biyo-Xaafad": [150], "Baaqi": [230], "Shidaal": [7,10], "Amaah Maxamad cali":[50] }}]  
+account_out = {"laptops": [650,20,5,8], "CCTV Camers" : [605], "Biyo galin": [480], "Nimcaan": [1000], "Passports": [900], "Biyo-Galin-6-guri": [1440]}
+Numbers = [{"name":"Hodan", "number": "0634800679"}, {"name":"Maxamad Yuusuf", "number": "0634711700"}, {"name":"cabdi casiis", "number": "0634464640"}, {"name":"Xamse cabdi cali", "number": "0634471067"}, {"name":"Xamse xuseen", "number": "0634850314"}, {"name":"Mubaarik c/raxamaan", "number": "0634113016"}, {"name" :"Fuaad caqli nuux", "number": "0633514753"} ]
 def Amaah_le():
     for Amaah in amaah:
         Hinda = sum(Amaah.get("Hinda"))
@@ -59,6 +60,10 @@ def ChooseMonth():
             print(f"Total Baxay bisha {Bisha.zfill(2)} aad :  {Total_baxay}$".title())
             Total_Guud = Total_Kiro - Total_baxay
             print(f"Waxaa la doonayay inuu soo hadho:{Total_Guud}$".title())
+            for Detailed in Baxay_detailed:
+                print(termcolor.colored("FaahFaahinta Bisha", "blue"))
+                for keys,values in Detailed.get(Bisha).items():
+                    print(f"{keys} : {sum(values)}".title())
             print(f"Total Dhaba {termcolor.colored(Total_Guud, "blue")}$")
             print(f"Taariikhda Maanta:" , datetime.now().strftime("%d-%b-%y"), "Time:" , datetime.now().strftime("%H:%M:%p"))
     elif Bisha.strip().upper() == "A":
